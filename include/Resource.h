@@ -16,7 +16,7 @@ public:
   std::string getName() const;
   virtual bool isAvailableForUse() const = 0;
   virtual void allocate() = 0;
-  virtual void relase() = 0;
+  virtual void release() = 0;
   virtual void use() = 0;
   Type getResourceType() const;
 };
