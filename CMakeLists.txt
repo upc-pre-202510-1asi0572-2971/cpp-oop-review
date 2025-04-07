@@ -11,4 +11,5 @@ set(CMAKE_CXX_EXTENSIONS ON)
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # Define the executable target
-add_executable(cpp_oop_review main.cpp)
+add_executable(cpp_oop_review main.cpp
+        src/Resource.cpp)
