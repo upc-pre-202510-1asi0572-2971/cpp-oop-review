@@ -1,5 +1,5 @@
-#ifndef CONSUMABLERESOURCE_H
-#define CONSUMABLERESOURCE_H
+#ifndef CONSUMABLE_RESOURCE_H
+#define CONSUMABLE_RESOURCE_H
 
 #include "Resource.h"
 
@@ -9,10 +9,10 @@ private:
   int remainingCapacity;
 public:
   ConsumableResource(const std::string& name, int capacity);
-  bool isAvailableForUse() const override;
+  [[nodiscard]] bool isAvailableForUse() const override;
   void allocate() override;
   void release() override;
   void use() const override;
-  int getRemainingCapacity() const;
+  [[nodiscard]] int getRemainingCapacity() const;
 };
-#endif //CONSUMABLERESOURCE_H
+#endif //CONSUMABLE_RESOURCE_H

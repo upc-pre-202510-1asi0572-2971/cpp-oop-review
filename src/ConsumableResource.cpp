@@ -23,7 +23,7 @@ void ConsumableResource::allocate() {
     isAvailable = (remainingCapacity > 0);
 }
 
-void ConsumableResource::use() const {
+void ConsumableResource::use() const  {
     std::cout << "Using consumable resource " << getName() << std::endl;
 }
 
