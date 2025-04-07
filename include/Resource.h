@@ -17,7 +17,7 @@ public:
   virtual bool isAvailableForUse() const = 0;
   virtual void allocate() = 0;
   virtual void release() = 0;
-  virtual void use() = 0;
+  virtual void use() const = 0;
   Type getResourceType() const;
 };
 #endif //RESOURCE_H
