@@ -15,4 +15,5 @@ add_executable(cpp_oop_review main.cpp
         src/Resource.cpp
         src/Executable.cpp
         src/UsableResource.cpp
-        src/ConsumableResource.cpp)
+        src/ConsumableResource.cpp
+        src/Task.cpp)
