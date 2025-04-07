@@ -12,6 +12,7 @@ public:
                 const std::string& description,
                 const std::vector<std::string>& requiredResourcesNames,
                 int durationInUnits);
+      void addResource(std::unique_ptr<Resource> resource);
       void addTask(std::unique_ptr<Executable> task);
       void execute() const override;
       void run();
