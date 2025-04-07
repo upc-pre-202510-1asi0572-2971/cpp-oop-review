@@ -1,5 +1,5 @@
-#ifndef USABLERESOURCE_H
-#define USABLERESOURCE_H
+#ifndef USABLE_RESOURCE_H
+#define USABLE_RESOURCE_H
 
 #include "Resource.h"
 
@@ -9,9 +9,9 @@ private:
 
 public:
   UsableResource(const std::string& name, int capacity);
-  bool isAvailableForUse() const override;
+  [[nodiscard]] bool isAvailableForUse() const override;
   void allocate() override;
   void release() override;
-  void use() override;
+  void use() const override;
 };
-#endif //USABLERESOURCE_H
+#endif //USABLE_RESOURCE_H

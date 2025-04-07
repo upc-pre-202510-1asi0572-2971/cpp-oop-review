@@ -18,7 +18,7 @@ void UsableResource::allocate() {
     isAvailable = false;
 }
 
-void UsableResource::use() {
+void UsableResource::use() const {
     std::cout << "Using resource '" << getName() << "'(capacity: " << capacity << " GHz)" << std::endl;
 }
 
