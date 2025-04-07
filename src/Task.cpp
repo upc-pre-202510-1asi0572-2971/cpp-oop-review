@@ -13,7 +13,7 @@ void Task::execute() const {
     if (assignedResources.size() != requiredResourcesNames.size())
         throw std::runtime_error("Not all resources are assigned to the task'" + name + "'");
     std::cout << "Executing task '" << getName() << "': " << description << " (Duration: " << durationUnits << ")" << std::endl;
-    for (const auto* resource : assignedResources)
+    for (const auto& resource : assignedResources)
         resource->use();
 }
 
