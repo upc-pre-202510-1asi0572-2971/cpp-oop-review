@@ -10,8 +10,23 @@ int main() {
             new Process(
                 "CompileMain",
                 "Compile main.cpp to main.exe",
-                { "CentralProcessingUnit", "Memory"},
+                {"CentralProcessingUnit", "Memory"},
                 15));
+        // Add resources to the process
+        compilationProcess->addResource(
+            std::unique_ptr<ConsumableResource>(
+                new ConsumableResource("Memory", 4096)));
+        compilationProcess->addResource(
+            std::unique_ptr<UsableResource>(
+                new UsableResource("CentralProcessingUnit", 3)));
+        // Define compilation tasks
+        compilationProcess->addTask(
+            std::unique_ptr<Task>(
+                new Task("ScanSourceCode", "Tokenize main.c",
+                         {"CentralProcessingUnit", "Memory"}, 2)));
+        // Run the process
+        std::cout << "Running process: " << compilationProcess->getName() << std::endl;
+        compilationProcess->run();
     } catch (const std::exception &e) {
         std::cerr << "Critical error: " << e.what() << std::endl;
         return 1;
