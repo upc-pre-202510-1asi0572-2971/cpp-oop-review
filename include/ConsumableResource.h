@@ -12,7 +12,7 @@ public:
   bool isAvailableForUse() const override;
   void allocate() override;
   void release() override;
-  void use() override;
+  void use() const override;
   int getRemainingCapacity() const;
 };
 #endif //CONSUMABLERESOURCE_H
